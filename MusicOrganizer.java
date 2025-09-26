@@ -166,4 +166,44 @@ public class MusicOrganizer
             System.out.println("No files found.");
         }
     }
+    
+    /**
+     * Play a small sample of all songs by Lisa Davies.
+     * Answer to Question 27
+     */
+    public void sampleLisaDavies()
+    {
+        boolean artistFound;
+        artistFound = false;
+        for(String filename : files) {
+            if(filename.contains("Lisa Davies")) {
+                // A match.
+                artistFound = true;
+                player.playSample(filename);
+            }
+        }
+        if(artistFound == false) {
+            System.out.println("Please save some Lisa Davies songs first!");
+        }
+    }
+    
+        /**
+     * Play a small sample of all songs by Studio Lisa.
+     * Answer to Question 27
+     */
+    public void sampleStudioLisa()
+    {
+        boolean artistFound;
+        artistFound = false;
+        for(String filename : files) {
+            if(filename.contains("Studio Lisa")) {
+                // A match.
+                artistFound = true;
+                player.playSample(filename);
+            }
+        }
+        if(artistFound == false) {
+            System.out.println("Please save some Studio Lisa songs first!");
+        }
+    }
 }
