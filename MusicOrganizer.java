@@ -153,11 +153,17 @@ public class MusicOrganizer
      */
     public void listMatching(String searchString)
     {
+        boolean fileFound;
+        fileFound = false;
         for(String filename : files) {
             if(filename.contains(searchString)) {
                 // A match.
                 System.out.println(filename);
+                fileFound = true;
             }
+        }
+        if(fileFound == false) {
+            System.out.println("No files found.");
         }
     }
 }
