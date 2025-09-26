@@ -63,6 +63,20 @@ public class MusicOrganizer
     }
     
     /**
+     * Show a list of all the files in the collection with their index number.
+     * Answer to Question 24
+     */
+    public void listWithIndex()
+    {
+        int position;
+        position = 0;
+        for(String filename : files) {
+            System.out.println(position + ": " + filename);
+            position++;
+        }
+    }
+    
+    /**
      * Remove a file from the collection.
      * @param index The index of the file to be removed.
      */
